@@ -64,12 +64,31 @@ Possible sources for performance data
 * Tool support for tasks, ?Runnables?, incl. stimulation and net ET
 * OS Overhead
 
+### Integration of Additional Data Soruces
+--- Optional section---
+If additional data is available this can be added to the model. 
+Typical data sources
+* AUTOSAR CP SystemDescription
+* AUTOSAR CP ECU Configuration (OsConfiguration, RTE Configuration)
+* Proprietary data bases e.g. for signals exchanged between components
 
 ### Scaling of Execution Times
+* Predict net execution times on target SoC
+* Granularity depends on use case. Typical task, runnable level,...
+* 
+How to find scaling factors?
 
 #### Categorization
+* Categories in library
+* Can be assigned based on known functionality (FFT, DCT, StateMachine, ...)
+* Used to define scope of scaling
+* Annotations
+** PMU data
+** Can be filled from processed traces
 
 #### Benchmarks
+* Linked to categories
+* CoreDependedExecutionTimes ==> Derive scaling factors
 
 ### Mapping to Target Hardware
 
@@ -81,6 +100,13 @@ Possible sources for performance data
 
 ### Model Based Timing Simulation and Report Generation
 
+
+### Case Study
+WP7 or artificial example
+
+
+
+# Old Stuff to Be Deleted
 Original description from first version, shall be replaced by above sections
 1. The existing application is traced on the old platform.
 2. From this trace, a scheduling and timing model is extracted.
@@ -89,7 +115,3 @@ Original description from first version, shall be replaced by above sections
 4. The application is mapped to the components of the new platform.
 5. A scheduling simulations generates a report, which summarizes the predicted behaviour 
    of the application on the new platform.
-
-
-### Case Study
-WP7 or artificial example
