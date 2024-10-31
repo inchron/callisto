@@ -31,17 +31,53 @@ The basic idea is shown in the picture.
 ### Tracing of Source System
 
 #### Classic Scheduling Traces
+* Traces shall contain events for each timing relevant action on target
+** Changes of task states (Running, Ready/Preempted, Waiting, Dead)
+** Optional: Start/End of Runnable
+
+Classic traces are typically used for "Place-holder for chronVIEW advertisement"
 
 #### Extensions with Additional Performance Data
-* Arm PMU
-* Proprietary counters e.g. on AXI and DRAM controller
+Classic scheduling traces are extended by additional performance data. In a first step this helps to select representative benchmarks.
+Additionally the data is required to consider interference channels in modelling and simulation.
+Possible sources for performance data
+* DWT counter
+* Arm PMU counter
+** Clocks
+** Instructions
+** LD / ST Instructions
+** MVE / NEON Instructions
+** Cache hit rates
+** Cache Refill / WB
+** ..
+* Proprietary counters 
+** AXI manager and subordinate ports
+** DRAM controller
+
+#### Trace Processing
+
+##### Identification of OS Overheads
+
+##### Processing of Performance Data
 
 ### Extraction of Timing Model
+* Tool support for tasks, ?Runnables?, incl. stimulation and net ET
+* OS Overhead
 
 
-### Scaling of Exeuction Times
+### Scaling of Execution Times
+
+#### Categorization
+
+#### Benchmarks
 
 ### Mapping to Target Hardware
+
+##### General Approach
+
+##### Consideration of OS Overheads
+
+##### Hypervisors
 
 ### Model Based Timing Simulation and Report Generation
 
