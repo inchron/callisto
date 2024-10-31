@@ -13,10 +13,16 @@ single core systems to complex systems of chips. Changes in the underlying proce
 * n Old Cores ==> m New Cores
 * Hypervisor with TDMA
 
+### Impact of New Target Hardware on Software Architecture
+* Depending on integration scenario software architecure has to be adapeted for target system
+  * Mapping of software componentes to clusters and cores
+  * Consideration of reconfiguration or exchange of BSW stack ==> Changed structure of tasks and mainfunctions
+   
+
 ### Scaling of Execution Times and Other Effects
 * One scaling factor is not sufficient
 * Goal: Fine granular scaling of execution times (Tasks, Runnables)
-* Additional consideration of interference channels, if software is executed in parallel on multiple cores
+* Additional consideration of interference (channels), if software is executed in parallel on multiple cores
 
 ## Workflow
 
@@ -32,8 +38,8 @@ The basic idea is shown in the picture.
 
 #### Classic Scheduling Traces
 * Traces shall contain events for each timing relevant action on target
-** Changes of task states (Running, Ready/Preempted, Waiting, Dead)
-** Optional: Start/End of Runnable
+  * Changes of task states (Running, Ready/Preempted, Waiting, Dead)
+  * Optional: Start/End of Runnable
 
 Classic traces are typically used for "Place-holder for chronVIEW advertisement"
 
@@ -43,16 +49,16 @@ Additionally the data is required to consider interference channels in modelling
 Possible sources for performance data
 * DWT counter
 * Arm PMU counter
-** Clocks
-** Instructions
-** LD / ST Instructions
-** MVE / NEON Instructions
-** Cache hit rates
-** Cache Refill / WB
-** ..
+ * Clocks
+ * Instructions
+ * LD / ST Instructions
+ * MVE / NEON Instructions
+ * Cache hit rates
+ * Cache Refill / WB
+ * ..
 * Proprietary counters 
-** AXI manager and subordinate ports
-** DRAM controller
+ * AXI manager and subordinate ports
+ * DRAM controller
 
 #### Trace Processing
 
@@ -62,7 +68,7 @@ Possible sources for performance data
 
 ### Extraction of Timing Model
 * Tool support for tasks, ?Runnables?, incl. stimulation and net ET
-* OS Overhead
+* Remove/replace OS Overhead
 
 ### Integration of Additional Data Soruces
 --- Optional section---
@@ -80,11 +86,11 @@ How to find scaling factors?
 
 #### Categorization
 * Categories in library
-* Can be assigned based on known functionality (FFT, DCT, StateMachine, ...)
 * Used to define scope of scaling
+* Can be assigned based on known functionality (FFT, DCT, StateMachine, ...)
 * Annotations
-** PMU data
-** Can be filled from processed traces
+  * Performance data
+  * Can be filled from processed traces
 
 #### Benchmarks
 * Linked to categories
@@ -102,7 +108,8 @@ How to find scaling factors?
 
 
 ### Case Study
-WP7 or artificial example
+WP7 based on ST(Italy) input  or artificial example
+Big version: ST(Munich) PPC==>Arm
 
 
 
