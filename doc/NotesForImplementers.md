@@ -14,6 +14,14 @@ RuleSetParam.overhead to point to your own definition of an EClass Time.
 The only requirement is that the serialization conforms to the format defined in the 
 callisto.ecore.
 
+## Working with Standard EMF Tools
+All models (i.e. instances of the meta model specified in callisto.ecore) can be created and edited with standard EMF tooling. The general steps required to generate an Editor are described here:
+https://www.vogella.com/tutorials/EclipseEMF/article.html
+
+The generation of the Editor itself is described in section "5. Create EMF Editor plug-ins".
+
+As this repository contains the .ecore files only, the required genmodel has to be created as described in section "11. Create EMF Generator Model".
+
 ## Default Serialization for Basic Types
 
 Many classes in the callisto.ecore are derived from the platform/ModelObject class. 
