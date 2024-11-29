@@ -17,6 +17,6 @@ There a many different ways to generate traces with scheduling events. The most 
 Most operating system offer hooks that are called when tasks, ISRS, ... change their state. In these hooks events are written to trace; here the writing of scheduling events has to be extended by events with performance data.
 
 
-![Hooks and PMU](images/hooks_pmu.png)
+![Hooks and PMU](../images/hooks_pmu.png)
 
 
