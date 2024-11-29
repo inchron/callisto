@@ -890,7 +890,7 @@
   </eClassifiers>
   <eSubpackages
       name="platform"
-      nsURI="http://inchron.com/callisto/0.1.0"
+      nsURI="http://inchron.com/callisto/platfrom/0.1.0"
       nsPrefix="platform">
     <eClassifiers
         xsi:type="ecore:EClass"
