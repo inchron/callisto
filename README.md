@@ -28,8 +28,7 @@ single core systems to complex systems of chips. Changes in the underlying proce
 
 1. The existing application is [traced on the old platform](doc/PMUTracing.md).
 2. From this trace, a [scheduling and timing model is extracted](doc/ModelExtraction.md).
-3. The timing model is scaled for the new platform. The scaling can be different 
-   for different parts of the application.
+3. The timing model is [scaled](doc/Scaling.md) for the new platform. The scaling can be different for different parts of the application.
 4. The application is mapped to the components of the new platform.
 5. A scheduling simulations generates a report, which summarizes the predicted 
    behaviour of the application on the new platform.
@@ -41,34 +40,6 @@ The basic idea is shown in the picture.
 * Somewhere we have to explain the library based approach.
 * Library is prepared by Arm, SIP, OSVendor
 * Library is used when Architect at OEM, T1, ... plans migration to new SoC
-
-
-### Tracing of Source System
-
-#### Classic Scheduling Traces and Performance Extensions
-Classic scheduling trace have to be enriched with performance data. Details are described [here](doc/PMUTracing.md).
-
-### Scaling of Execution Times
-* Predict net execution times on target SoC
-* Granularity depends on use case. Typical task, runnable level,...
-* 
-How to find scaling factors?
-
-#### Categorization
-* Categories in library
-* Used to define scope of scaling
-* Can be assigned based on known functionality (FFT, DCT, StateMachine, ...)
-* Annotations
-  * Performance data
-  * Can be filled from processed traces
-
-#### Benchmarks
-* Benchmarks are executed on all platforms
-* Results are stored in CoreDependedExecutionTimes 
-* Scaling factors between platforms can be derived
-* Linked to categories
-* Helps to find representative categories
-
 
 ### Mapping to Target Hardware
 
