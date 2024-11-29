@@ -1,28 +1,30 @@
-# Callisto
+<img src="images/arm.png" height="44">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="images/inchron-white-531x90.png" height="44">
 
-The project Callisto targets the prediction of real-time behaviour in very early 
-phases of the system design. It was designed to specifically support the migration of 
-single core systems to complex systems of chips. Changes in the underlying processor architectures are also supported.
+# Project Callisto
+
+Picking a new SoC and migrating software is a frequent task of OEMs, Tier-1s and 
+engineering service providers in cooperation with the silicon manufacturers. With a 
+strong focus on the software architecture, INCHRON and Arm teamed up to provide a deep 
+understanding of how an application would run on a new SoC, and to anticipate the 
+resource consumption.
+
+The solution utilizes trace analysis and model-based simulation. Users will 
+significantly lower the risk of choosing the wrong device (picture shows Arm M33 to 
+R52 migration example). 
+
 
 ## Use Cases and Challenges
 
-### Migration Without Hypervisor
-* 1 Old Core ==> 1 New Core
+* **Software migration**: Most new systems start with a lot of pre-existing software. 
+  The software is refactored and combined with new software. Together it will be 
+  deployed to a SoC of choice. New count and types of cores have to be taken into 
+  account. Changes in operating systems and communication paths have to be considered. 
 
-### Migration With Hypervisor
-* n Old Cores ==> m New Cores
-* Hypervisor with TDMA
-
-### Impact of New Target Hardware on Software Architecture
-* Depending on integration scenario software architecure has to be adapeted for target system
-  * Mapping of software componentes to clusters and cores
-  * Consideration of reconfiguration or exchange of BSW stack ==> Changed structure of tasks and mainfunctions
-   
-
-### Scaling of Execution Times and Other Effects
-* One scaling factor is not sufficient
-* Goal: Fine granular scaling of execution times (Tasks, Runnables)
-* Additional consideration of interference (channels), if software is executed in parallel on multiple cores
+* **SoC selection**: By applying the software migration above to different SoCs during 
+  the SoC selection process, the SoCs can be compared to each other with regard to 
+  the specific software.
 
 ## Workflow
 
@@ -39,12 +41,18 @@ The basic idea is shown in the picture.
 ![The workflow](images/workflow.png)
 
 ## Library
-The library is a central component that stores all relevant parameters that are required by each step of the workflow. All vendors of IP, silicon, operating systems, BSW, ... can contribute to the library. The library is used by Architects at OEMs, T1s, ... who plan the migration to new SoCs: They can focus on their application while parameters of hardware and operating systems are provided by the library. As the parameters are often confidential, each project, company, unit, .. can have its own version of the library.
 
+The library is a central component that stores all relevant parameters that are 
+required by each step of the workflow. All vendors of IP, silicon, operating systems, 
+BSW, etc. can contribute to the library. The library is used by e.g. Architects at OEMs, 
+or T1s who plan the migration to new SoCs: They can focus on their application while
+parameters of hardware and operating systems are provided by the library. As the
+parameters are often confidential, each project, company, division, or even team can 
+have its own version of the library.
 
 ## Contribution
 
 This project has been developed by [Arm](https://arm.com) and [INCHRON]
-(https://inchron.com). We are looking for potential users as well as for active
+(https://inchron.com). We are looking for potential users as well as for active 
 contributors from different areas. If you are interested, please see [Contribution]
 (doc/CallForContribution.md).
