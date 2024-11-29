@@ -113,19 +113,3 @@ How to find scaling factors?
 
 ### Model Based Timing Simulation and Report Generation
 
-
-### Case Study
-WP7 based on ST(Italy) input  or artificial example
-Big version: ST(Munich) PPC==>Arm
-
-
-
-# Old Stuff to Be Deleted
-Original description from first version, shall be replaced by above sections
-1. The existing application is traced on the old platform.
-2. From this trace, a scheduling and timing model is extracted.
-3. The timing model is scaled for the new platform. The scaling can be different for 
-   different parts of the application.
-4. The application is mapped to the components of the new platform.
-5. A scheduling simulations generates a report, which summarizes the predicted behaviour 
-   of the application on the new platform.
