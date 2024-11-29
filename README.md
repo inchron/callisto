@@ -52,7 +52,7 @@ have its own version of the library.
 
 ## Contribution
 
-This project has been developed by [Arm](https://arm.com) and [INCHRON]
-(https://inchron.com). We are looking for potential users as well as for active 
-contributors from different areas. If you are interested, please see [Contribution]
-(doc/CallForContribution.md).
+This project has been developed by [Arm](https://arm.com) and 
+[INCHRON](https://inchron.com). We are looking for potential users as well as for active 
+contributors from different areas. If you are interested, please see
+[Contribution](doc/CallForContribution.md).
