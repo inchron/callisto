@@ -43,29 +43,9 @@ The basic idea is shown in the picture.
 
 ### Tracing of Source System
 
-#### Classic Scheduling Traces
-* Traces shall contain events for each timing relevant action on target
-  * Changes of task states (Running, Ready/Preempted, Waiting, Dead)
-  * Optional: Start/End of Runnable
+#### Classic Scheduling Traces and Performance Extensions
+Classic scheduling trace have to be enriched with performance data. Details are described [here](doc/PMUTracing.md).
 
-Classic traces are typically used for "Place-holder for chronVIEW advertisement"
-
-#### Extensions with Additional Performance Data
-Classic scheduling traces are extended by additional performance data. In a first step this helps to select representative benchmarks.
-Additionally the data is required to consider interference channels in modelling and simulation.
-Possible sources for performance data
-* DWT counter
-* Arm PMU counter
- * Clocks
- * Instructions
- * LD / ST Instructions
- * MVE / NEON Instructions
- * Cache hit rates
- * Cache Refill / WB
- * ..
-* Proprietary counters 
- * AXI manager and subordinate ports
- * DRAM controller
 
 #### Trace Processing
 Traces captured from target contain raw data that needs further processing.

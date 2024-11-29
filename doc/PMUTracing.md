@@ -12,6 +12,16 @@ Modern SoCs offer additional, proprietary counters, e.g. for interconnect transf
 ### Arm DWT and PMU Counters
 Arm v8 Architecture specifies the Data Watchpoint and Trace unit (DWT) and the Performance Monitors Extension (PMU).
 
+DWT offers a 32 bit counter for clocks and 8 bit counters for additional cycles lost in specific situations. This allows calculation of CPI in trace processing, but the limited range of 8 bit counters is challenging.
+
+PMU offers a set of counters (e.g. 4) that can be configured to count a specific event each. A wide range of events is offered; some details are implementation specific. The following counters are examples that have shown to be helpful during this project:
+
+* Number of executed instructions
+* Number of executed LD / ST Instructions
+* Number of executedMVE / NEON Instructions
+* Cache hit rates
+* Cache Refill / WB
+ 
 ## Integration of Performance Data Into Existing Trace Solutions
 There a many different ways to generate traces with scheduling events. The most common are observation of variables that contain task states and instrumentation code in hooks provided by the operating system. If observation of variables is used, recording of performance data requires dedicated hardware support. This approach is complex and currently not considered here.
 Most operating system offer hooks that are called when tasks, ISRS, ... change their state. In these hooks events are written to trace; here the writing of scheduling events has to be extended by events with performance data.
