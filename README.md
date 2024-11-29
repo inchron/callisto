@@ -26,11 +26,13 @@ single core systems to complex systems of chips. Changes in the underlying proce
 
 ## Workflow
 
-1. The existing application is traced on the old platform.
-2. From this trace, a scheduling and timing model is extracted.
-3. The timing model is scaled for the new platform. The scaling can be different for different parts of the application.
+1. The existing application is [traced on the old platform](doc/PMUTracing.md).
+2. From this trace, a [scheduling and timing model is extracted](doc/ModelExtraction.md).
+3. The timing model is scaled for the new platform. The scaling can be different 
+   for different parts of the application.
 4. The application is mapped to the components of the new platform.
-5. A scheduling simulations generates a report, which summarizes the predicted behaviour of the application on the new platform.
+5. A scheduling simulations generates a report, which summarizes the predicted 
+   behaviour of the application on the new platform.
 
 The basic idea is shown in the picture.
 
@@ -45,38 +47,6 @@ The basic idea is shown in the picture.
 
 #### Classic Scheduling Traces and Performance Extensions
 Classic scheduling trace have to be enriched with performance data. Details are described [here](doc/PMUTracing.md).
-
-
-#### Trace Processing
-Traces captured from target contain raw data that needs further processing.
-
-##### Identification of OS Overheads
-* Overhead for context switches is often not directly visible in trace
-* In which form overhead is included in other elements (tasks, idle task), depends on trace tool (-chain).
-* Trace post processing required
- * Insert overhead in dedicated overhead tasks
- * Remove overhead from other elements
- * Specification of details in library
- 
-##### Processing of Performance Data
-* Traces contain raw data only
- * Monotonic counters with overflow
- * 
-Task processing to generated required data
-* Combine counters e.g. clock and instruction counter to CPI 
-* Assign differences in counters to tasks, runnables, ... (similar to net ET)
-
-### Extraction of Timing Model
-* Tool support for tasks, ?Runnables?, incl. stimulation and net ET
-* Remove/replace OS Overhead
-
-### Integration of Additional Data Sources
---- Optional section---
-If additional data is available this can be added to the model. 
-Typical data sources
-* AUTOSAR CP SystemDescription
-* AUTOSAR CP ECU Configuration (OsConfiguration, RTE Configuration)
-* Proprietary data bases e.g. for signals exchanged between components
 
 ### Scaling of Execution Times
 * Predict net execution times on target SoC
@@ -112,4 +82,3 @@ How to find scaling factors?
 ##### Hypervisors
 
 ### Model Based Timing Simulation and Report Generation
-
