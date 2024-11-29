@@ -38,6 +38,13 @@ The basic idea is shown in the picture.
 
 ![The workflow](images/workflow.png)
 
-* Somewhere we have to explain the library based approach.
-* Library is prepared by Arm, SIP, OSVendor
-* Library is used when Architect at OEM, T1, ... plans migration to new SoC
+## Library
+The library is a central component that stores all relevant parameters that are required by each step of the workflow. All vendors of IP, silicon, operating systems, BSW, ... can contribute to the library. The library is used by Architects at OEMs, T1s, ... who plan the migration to new SoCs: They can focus on their application while parameters of hardware and operating systems are provided by the library. As the parameters are often confidential, each project, company, unit, .. can have its own version of the library.
+
+
+## Contribution
+
+This project has been developed by [Arm](https://arm.com) and [INCHRON]
+(https://inchron.com). We are looking for potential users as well as for active
+contributors from different areas. If you are interested, please see [Contribution]
+(doc/CallForContribution.md).
