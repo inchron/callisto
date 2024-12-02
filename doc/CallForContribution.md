@@ -9,5 +9,5 @@ If you want to contribute, please do not hesitate to contact the project team vi
 <callisto (at) inchron.com> (closed mailing list).
 
 End users should contact the individual partners:
-* Bernhard Rill <bernhard.rill (at) arm.com>
+* Bernhard Rill <project_callisto (at) arm.com>
 * INCHRON Sales <sales (at) inchron.com>
