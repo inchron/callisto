@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<types:TracingTool xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:types="http://inchron.com/realtime/root/3.5.30/types" intrinsicId="_KlmvNqQCTrGkmY3V6TqA/w" name="TracingTool">
+  <glitchThreshold/>
+  <pmuOperations intrinsicId="_BmMoNCGbSLS8LCSP6RiIVA" name="MemoryRatio_1000" eventName="MemoryRatio_1000">
+    <operation xsi:type="types:Multiply">
+      <leftSide xsi:type="types:Divide">
+        <leftSide xsi:type="types:Accumulate">
+          <leftSide xsi:type="types:PmuCounter" intrinsicId="_6pry9DTyReeqqizf6yiKwQ" name="pmu2_LdInstructions" counter="/@root/@model/@systems.Generic_CPU/@translationUnits.CPU.c/@sourceFunctions.UserEvents/@traceEvents.pmu2"/>
+          <rightSide xsi:type="types:PmuCounter" intrinsicId="_Gh5YLH0/T6ihmU8kfrCQBA" name="pmu3_StInstructions" counter="/@root/@model/@systems.Generic_CPU/@translationUnits.CPU.c/@sourceFunctions.UserEvents/@traceEvents.pmu3"/>
+        </leftSide>
+        <rightSide xsi:type="types:PmuCounter" intrinsicId="_dGyhJrR0QK2FjWATxBGXnQ" name="pmu1_Instructions" counter="/@root/@model/@systems.Generic_CPU/@translationUnits.CPU.c/@sourceFunctions.UserEvents/@traceEvents.pmu1"/>
+      </leftSide>
+      <rightSide xsi:type="types:Constant" value="1000"/>
+    </operation>
+  </pmuOperations>
+  <pmuOperations intrinsicId="_QrxTzqnlSW63advOCSyA5w" name="StRatio_1000" eventName="StRatio_1000">
+    <operation xsi:type="types:Multiply">
+      <leftSide xsi:type="types:Divide">
+        <leftSide xsi:type="types:PmuCounter" intrinsicId="_a1/Y/AC1RXaxCxczgzyTzQ" name="pmu3_LdInstructions" counter="/@root/@model/@systems.Generic_CPU/@translationUnits.CPU.c/@sourceFunctions.UserEvents/@traceEvents.pmu3"/>
+        <rightSide xsi:type="types:PmuCounter" intrinsicId="_BMVryA4BTHaA5UDXvn4Ymw" name="pmu1_Instructions" counter="/@root/@model/@systems.Generic_CPU/@translationUnits.CPU.c/@sourceFunctions.UserEvents/@traceEvents.pmu1"/>
+      </leftSide>
+      <rightSide xsi:type="types:Constant" value="1000"/>
+    </operation>
+  </pmuOperations>
+  <pmuOperations intrinsicId="_m7i4+lKySsC/GlpSsh/Anw" name="LdRatio_1000" eventName="LdRatio_1000">
+    <operation xsi:type="types:Multiply">
+      <leftSide xsi:type="types:Divide">
+        <leftSide xsi:type="types:PmuCounter" intrinsicId="_2zVFXFFJTBiFR+omFDY8dg" name="pmu2_LdInstructions" counter="/@root/@model/@systems.Generic_CPU/@translationUnits.CPU.c/@sourceFunctions.UserEvents/@traceEvents.pmu2"/>
+        <rightSide xsi:type="types:PmuCounter" intrinsicId="_GBVcZwICRGajjynpjNurjg" name="pmu1_Instructions" counter="/@root/@model/@systems.Generic_CPU/@translationUnits.CPU.c/@sourceFunctions.UserEvents/@traceEvents.pmu1"/>
+      </leftSide>
+      <rightSide xsi:type="types:Constant" value="1000"/>
+    </operation>
+  </pmuOperations>
+  <pmuOperations intrinsicId="_Avsz1QiNREa+2lypxzRmCQ" name="LocalCPI_1000" eventName="LocalCPI_1000">
+    <operation xsi:type="types:Multiply">
+      <leftSide xsi:type="types:Divide">
+        <leftSide xsi:type="types:PmuCounter" intrinsicId="_A+LfXXeJSTK2dlUohOkxmg" name="pmu0_Clocks" counter="/@root/@model/@systems.Generic_CPU/@translationUnits.CPU.c/@sourceFunctions.UserEvents/@traceEvents.pmu0"/>
+        <rightSide xsi:type="types:PmuCounter" intrinsicId="_N7m1RsuqShKMBOrbj9Ot+w" name="pmu1_Instructions" counter="/@root/@model/@systems.Generic_CPU/@translationUnits.CPU.c/@sourceFunctions.UserEvents/@traceEvents.pmu1"/>
+      </leftSide>
+      <rightSide xsi:type="types:Constant" value="1000"/>
+    </operation>
+  </pmuOperations>
+  <pmuOperations intrinsicId="_jmLWkgN5Sryy98KTBQ0Hhg" name="GlobalCPI_1000" eventName="GlobalCPI_1000" container="/@root/@model/@systems.Generic_CPU/@translationUnits.CPU.c/@sourceFunctions.UserEvents" perExecutable="false">
+    <operation xsi:type="types:Multiply">
+      <leftSide xsi:type="types:Divide">
+        <leftSide xsi:type="types:PmuCounter" intrinsicId="_QVXTL/34QU+ymhWGzpLbyw" name="pmu0_Clocks" counter="/@root/@model/@systems.Generic_CPU/@translationUnits.CPU.c/@sourceFunctions.UserEvents/@traceEvents.pmu0"/>
+        <rightSide xsi:type="types:PmuCounter" intrinsicId="_ccOCTKMuTCawAeYluRdCyg" name="pmu1_Instructions" counter="/@root/@model/@systems.Generic_CPU/@translationUnits.CPU.c/@sourceFunctions.UserEvents/@traceEvents.pmu1"/>
+      </leftSide>
+      <rightSide xsi:type="types:Constant" value="1000"/>
+    </operation>
+  </pmuOperations>
+</types:TracingTool>
